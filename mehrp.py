@@ -1,12 +1,13 @@
+import os
+import pkg_resources
 import pyaudio
 import threading
 import time
 import wave
 
-
+DATA_PATH = pkg_resources.resource_filename('mehrp', 'data/')
 CHUNK_SIZE = 1024
-MEHRP_PATH = 'data/mehrp.wav'
-
+MEHRP_PATH = os.path.join(DATA_PATH, 'mehrp.wav')
 
 class _MehrpPlayThread(threading.Thread):
     def __init__(self, *args, **kwargs):
