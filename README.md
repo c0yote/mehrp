@@ -18,13 +18,21 @@ Times you might wish for your terminal to "merhp" at you include:
 
 Play a number of merhps while blocking:
 
-    mehrp(3)
-    # merhp sounds 3 times
+```python
+from mehrp import mehrp
+
+mehrp(3)
+# merhp sounds 3 times
+```
 
 Play mehrps during an `input()` builtin call:
 
-    value = mehrp_until_input()
-    # merhps until user input
+```python
+from mehrp import mehrp_until_input
 
-    value = mehrp_until_input('>')
-    # same as above, but with a prompt
+value = mehrp_until_input()
+# merhps until user input
+
+value = mehrp_until_input('>')
+# same as above, but with a prompt
+```
